@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+   <head>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+   </head>
+
+   <body ng-app = "myapp">
+
+      <div ng-controller = "HelloController" >
+         <h2>Welcome {{helloTo.title}} </br>{{descDetails.data}}</h2>
+         <input type="button"></input>
+      </div>
+
+      <script>
+         angular.module("myapp", [])
+
+         .controller("HelloController", function($scope) {
+            $scope.helloTo = {};
+            $scope.descDetails = {};
+            $scope.helloTo.title = "kaushal";
+            $scope.descDetails.data = "Hi i worked in magic";
+         });
+      </script>
+
+   </body>
+</html>
